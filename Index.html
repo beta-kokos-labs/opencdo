@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Iframe</title>
+  <script>
+    window.addEventListener('message', (event) => {
+      // Ensure the message is from a trusted origin
+      if (event.origin !== 'http://example.com') {
+        console.error('Message from untrusted origin:', event.origin);
+        return;
+      }
+      
+      // Handle the parent URL
+      const parentURL = event.data;
+      console.log('Parent URL:', parentURL);
+      
+      // Here you can add logic to verify if the URL is legitimate
+      if (isValidURL(parentURL)) {
+        console.log('The site is legitimate.');
+      } else {
+        console.log('The site is not legitimate.');
+      }
+    });
+
+    function isValidURL(url) {
+      // Implement your URL verification logic here
+      // For example, you could check against a list of known legitimate URLs
+      return url === 'http://expected-url.com';
+    }
+  </script>
+</head>
+<body>
+  <h1>Iframe Content</h1>
+</body>
+</html>
