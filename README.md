@@ -1,6 +1,8 @@
 <img src='ce820221-f15b-4062-b0e0-fc38a2de75a0.jpeg'>
 
-<h1>CDO</h1><h3>
+<h1>openCDO</h1><h3>
+ We are a completely open source security service that is starting of simple from here
+ <hr>
 You will need to put the code below into your file for verification.
  <hr>   
 When we set it up you can join our hard working team of volunteers
