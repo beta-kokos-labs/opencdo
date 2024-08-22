@@ -1,7 +1,7 @@
 from flask import Flask, render_template, jsonify, url_for, redirect
 
 app=Flask(__name__)
-app.config['SERVER_NAME'] = '.com'
+app.config['SERVER_NAME'] = 'example.com'
 
 @app.route('/')
 def main():
