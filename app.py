@@ -7,7 +7,7 @@ app.config['SERVER_NAME'] = 'example.com'
 def main():
     return render_template('index.html')
 
-@app.route('/', subdomain = 'sites')
+@app.route('/sites')
 def sites():
     return render_template('sites.html')
 
