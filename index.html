@@ -29,6 +29,13 @@
       // For example, you could check against a list of known legitimate URLs
       return url === 'http://expected-url.com';
     }
+    fetch("safe.txt")
+    .then(function (res) {
+        return res.text();
+    })
+    .then(function (data) {
+        console.log(data);
+    });
   </script>
 </head>
 <body>
