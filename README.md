@@ -1,5 +1,6 @@
 <img src='cdologo.jpeg'>
 <meta property=“og:image” content=“cdologo.jpeg ” /> 
+<meta property=“og:image” content=“cdologo.jpeg ” /> 
 <h1>openCDO</h1><h3>
  We are the Cyber Defense Organization, a completely open source security service that is starting off simple from here
  <hr>
