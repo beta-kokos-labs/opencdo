@@ -2,6 +2,7 @@
 <!--meta property=“og:image” content=“cdologo.jpeg ” /> 
 <meta property=“og:image” content=“cdologo.jpeg ” /--> 
 <h1>openCDO</h1><h3>
+ main site can be found at https://opencdo.onrender.com
  We are the Cyber Defense Organization, a completely open source security service that is starting off simple from here
  <hr>
 You will need to put the code below into your file for verification.
@@ -24,7 +25,7 @@ When we set it up you can join our hard working team of volunteers
 </script>
 </head>
  <body>
-     <iframe id="myIframe" src="iframe.html"></iframe>
+     <iframe id="myIframe" src="https://opencdo.onrender.com/sites"></iframe>
     </body>
     </html>
 <hr>
