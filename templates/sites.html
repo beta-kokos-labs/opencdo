@@ -2,12 +2,14 @@
 <html>
 <head>
   
-  <meta property=“og:image” content=“ce820221-f15b-4062-b0e0-fc38a2de75a0.jpeg ” /> 
+  <meta property=“og:image” content=“cdologo.jpeg” /> 
   <title>Iframe</title>
-  <script>
+  <script>let fake=false
     window.addEventListener('message', (event) => {
+      check()
       // Ensure the message is from a trusted origin
-      if (event.origin !== 'http://example.com') {
+      if (event.origin !== event.data) {
+        document.getElementById('image').src = '3.png'
         console.error('Message from untrusted origin:', event.origin);
         return;
       }
@@ -20,25 +22,40 @@
       if (isValidURL(parentURL)) {
         console.log('The site is legitimate.');
       } else {
-        console.log('The site is not legitimate.');
+
+        document.getElementById('image').src = "{{ url_for('static', filename='3.png') }}"
       }
     });
 
     function isValidURL(url) {
       // Implement your URL verification logic here
       // For example, you could check against a list of known legitimate URLs
-      return url === 'http://expected-url.com';
+      return check(url)
     }
-    fetch("safe.txt")
-    .then(function (res) {
-        return res.text();
-    })
-    .then(function (data) {
-        console.log(data);
-    });
+    function check(e){
+      fetch("safe.txt")
+      .then(function (res) {
+          let text = res.text();
+      })
+      .then(function (data) {
+          console.log(data);
+      });
+    // Define the array with strings
+    // Define the array with strings
+    const list = text.split('\n')
+        
+    // Define the text you want to check
+    const textToCheck = e;
+        
+    // Find the index of the first element that includes the specified text
+    const index = list.findIndex(element => element.includes(textToCheck));
+        
+    // Output the result
+    console.log(index); // 0 if the first element contains 'includes', otherwise -1 if no element contains it
+    }
   </script>
 </head>
-<body>
-  <h1>Iframe Content</h1>
+<body><img src="{{ url_for('static', filename='4.png') }}" alt="website value" id="image">
+  <!--h1>Iframe Content</h1-->
 </body>
 </html>
