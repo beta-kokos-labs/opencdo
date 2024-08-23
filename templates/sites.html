@@ -22,7 +22,6 @@
       if (isValidURL(parentURL)) {
         console.log('The site is legitimate.');
       } else {
-
         document.getElementById('image').src = "{{ url_for('static', filename='3.png') }}"
       }
     });
@@ -36,13 +35,14 @@
       fetch("safe.txt")
       .then(function (res) {
           let text = res.text();
+          console.log(text);
       })
       .then(function (data) {
           console.log(data);
       });
     // Define the array with strings
     // Define the array with strings
-    const list = text.split('\n')
+    const list = text.split('\n');
         
     // Define the text you want to check
     const textToCheck = e;
