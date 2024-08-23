@@ -24,10 +24,9 @@ When we set it up you can join our hard working team of volunteers
    window.onload = sendParentURL;
 </script>
 </head>
- <body>
-     <iframe id="myIframe" src="https://opencdo.onrender.com/sites"></iframe>
-    </body>
-    </html>
-<hr>
+<body>
+    <iframe id="myIframe" src="https://opencdo.onrender.com/sites"></iframe>
+</body>
+</html>
 ```
 we will also have ways for companies to contact about having their website being put on the list of trusted sites
