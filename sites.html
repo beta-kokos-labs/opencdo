@@ -58,3 +58,24 @@
 <body><img src="{{ url_for('static', filename='4.png') }}" alt="website value" id="image" width="100%">
 </body>
 </html>
+const fileUrl = 'https://raw.githubusercontent.com/user/repo/branch/src/example.js';
+const searchPattern = /function\s+myFunction/i;  // Case-insensitive pattern
+
+fetch(fileUrl)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.text();
+  })
+  .then(data => {
+    // Check if the pattern is present in the file content
+    if (searchPattern.test(data)) {
+      console.log(`Pattern "${searchPattern}" found in the file.`);
+    } else {
+      console.log(`Pattern "${searchPattern}" not found in the file.`);
+    }
+  })
+  .catch(error => {
+    console.error('There was a problem with the fetch operation:', error);
+  });
