@@ -15,17 +15,10 @@ When we set it up you can join our hard working team of volunteers
 <html>
 <head>
   <title>Parent Window</title>
-<script>
-    function sendParentURL() {
-     const iframe = document.getElementById('myIframe');
-     iframe.contentWindow.postMessage(window.location.href, '*');
-    }
-    
-   window.onload = sendParentURL;
-</script>
+  <script src='url-goes-here.github.io'></script>
 </head>
 <body>
-    <iframe id="myIframe" src="https://opencdo.onrender.com/sites"></iframe>
+    <!-- your code here -->
 </body>
 </html>
 ```
