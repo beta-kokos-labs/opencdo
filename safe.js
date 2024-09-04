@@ -1,5 +1,5 @@
 const fileUrl = 'https://raw.githubusercontent.com/kokos-labs/opencdo-db/main/safe.txt';
-const textToCheck = 'https://chat.openai.com/hi';  // Replace this with the text you want to search for
+const textToCheck = 'openai.com';  // Replace this with the text you want to search for
 
 // Fetch the file content
 fetch(fileUrl)
@@ -14,9 +14,10 @@ fetch(fileUrl)
     const lines = data.split('\n');
 
     // Find the index of the first line that includes the textToCheck
-    const index = lines.findIndex(line => line.includes(textToCheck));
+    //const index = lines.findIndex(line => line.includes(textToCheck));
+    const index = lines.includes(textToCheck)
 
-    if (index !== -1) {
+    if (index) {
       console.log(`Text "${textToCheck}" found at line ${index}: "${lines[index]}"`);
     } else {
       console.log(`Text "${textToCheck}" not found in the file.`);
