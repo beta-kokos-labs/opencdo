@@ -32,3 +32,7 @@ fetch(fileUrl)
   //if(trusted){
   //  return "<img src='static/1.png' aria-hidden='true'>"
   //}
+//body {
+//  background-image: url('example_img_girl.jpg');
+//  background-repeat: no-repeat;
+//}
