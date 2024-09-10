@@ -15,7 +15,7 @@ When we set it up you can join our hard working team of volunteers
 <html>
 <head>
   <title>Parent Window</title>
-  <script src='url-goes-here.github.io'></script>
+  <script src='https://kokos-labs.github.io/opencdo/safe.js'></script>
 </head>
 <body>
     <!-- your code here -->
