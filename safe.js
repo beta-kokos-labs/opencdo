@@ -1,5 +1,5 @@
 const fileUrl = 'https://raw.githubusercontent.com/kokos-labs/opencdo-db/main/safe.txt';
-const textToCheck = 'openai.com';  // Replace this with the text you want to search for
+const textToCheck = window.location.hostname;  // Replace this with the text you want to search for
 
 // Fetch the file content
 fetch(fileUrl)
